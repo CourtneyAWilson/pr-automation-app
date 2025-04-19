@@ -1,45 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Axicom PR Dashboard</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Axicom PR Dashboard</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <img src="axicom_logo.png" alt="Axicom Logo" class="logo" />
-    <h1>Axicom PR Dashboard</h1>
-    <p class="subtitle">Built by Courtney Wilson</p>
-  </header>
+    <header>
+        <img src="icons/Axicom_logo.png" alt="Axicom Logo" class="logo">
+        <h1>Axicom PR Dashboard</h1>
+        <p>Built by Courtney Wilson</p>
+    </header>
 
-  <section class="features">
-    <div class="card">
-      <img src="icons/coverage.svg" alt="Coverage Icon" />
-      <h2>Latest Coverage</h2>
-      <p>Track real-time mentions and sentiment.</p>
-    </div>
-    <div class="card">
-      <img src="icons/sentiment.svg" alt="Sentiment Icon" />
-      <h2>Sentiment Pulse</h2>
-      <p>Live tone analysis across earned media.</p>
-    </div>
-    <div class="card">
-      <img src="icons/automation.svg" alt="Automation Icon" />
-      <h2>AI Press Release</h2>
-      <p>Auto-generate coverage-ready releases in seconds.</p>
-    </div>
-  </section>
+    <main>
+        <section class="cards">
+            <div class="card">
+                <img src="icons/coverage.svg" alt="Coverage Icon">
+                <h2>Latest Coverage</h2>
+                <p>Track real-time mentions and sentiment.</p>
+            </div>
+            <div class="card">
+                <img src="icons/sentiment.svg" alt="Sentiment Icon">
+                <h2>Sentiment Pulse</h2>
+                <p>Live tone analysis across earned media.</p>
+            </div>
+            <div class="card">
+                <img src="icons/ai.svg" alt="Automation Icon">
+                <h2>AI Press Release</h2>
+                <p>Auto-generate coverage-ready releases.</p>
+            </div>
+        </section>
 
-  <section class="news-section">
-    <h2><img src="icons/coverage.svg" alt="" class="inline-icon"/> PR Industry Headlines</h2>
-    <ul id="newsList">Loading top stories...</ul>
-  </section>
+        <section class="news-section">
+            <h2><img src="icons/coverage.svg" alt="News Icon" class="news-icon"> PR Industry Headlines</h2>
+            <ul id="news-list"></ul>
+        </section>
+    </main>
 
-  <footer>
-    © 2025 Axicom. Designed for PR excellence.
-  </footer>
+    <footer>
+        <p>&copy; 2025 Axicom. Designed for PR excellence.</p>
+    </footer>
 
-  <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

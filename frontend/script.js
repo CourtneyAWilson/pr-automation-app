@@ -1,21 +1,32 @@
-const apiKey = "58df04c8eb5be6be4aef9d5d5539bdad";
-const newsList = document.getElementById("newsList");
+const API_KEY =58df04c8eb5be6be4aef9d5d5539bdad;
+const NEWS_API = `https://gnews.io/api/v4/search?q=public%20relations&lang=en&max=5&apikey=${API_KEY}`;
 
-async function loadNews() {
-  try {
-    const response = await fetch(`https://gnews.io/api/v4/top-headlines?category=general&lang=en&country=gb&apikey=${apiKey}`);
-    const data = await response.json();
+window.addEventListener("DOMContentLoaded", () => {
+    fetchNews();
+});
 
-    newsList.innerHTML = "";
+function fetchNews() {
+    fetch(NEWS_API)
+        .then(res => res.json())
+        .then(data => {
+            const list = document.getElementById("news-list");
+            list.innerHTML = "";
 
-    data.articles.slice(0, 6).forEach(article => {
-      const li = document.createElement("li");
-      li.innerHTML = `<strong><a href="${article.url}" target="_blank" rel="noopener noreferrer">${article.title}</a></strong><br/><small>${article.source.name}</small>`;
-      newsList.appendChild(li);
-    });
-  } catch (error) {
-    newsList.innerHTML = `<li>Could not fetch news. Please check your connection or API key.</li>`;
-  }
+            if (data.articles) {
+                data.articles.forEach(article => {
+                    const item = document.createElement("li");
+                    item.innerHTML = `
+                        <strong>${article.title}</strong><br>
+                        <a href="${article.url}" target="_blank">${article.source.name}</a>
+                    `;
+                    list.appendChild(item);
+                });
+            } else {
+                list.innerHTML = "<li>No news available.</li>";
+            }
+        })
+        .catch(err => {
+            document.getElementById("news-list").innerHTML = "<li>Error loading news.</li>";
+            console.error("News API Error:", err);
+        });
 }
-
-loadNews();
