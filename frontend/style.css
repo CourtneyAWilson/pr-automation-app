@@ -1,81 +1,67 @@
 body {
     font-family: 'Inter', sans-serif;
     margin: 0;
-    background: #f7f9fc;
-    color: #111;
-  }
-  
-  .container {
-    max-width: 1000px;
-    margin: auto;
-    padding: 2rem;
-  }
-  
-  .logo {
-    .logo {
-        height: 60px;
-        margin-bottom: 20px;
-      }
-      
+    background: #ffffff;
+    color: #1d1d1f;
   }
   
   header {
+    background-color: #001F5B;
+    color: white;
+    padding: 2rem;
     text-align: center;
-    margin-bottom: 2rem;
   }
   
-  header h1 {
-    margin: 0.5rem 0;
-    font-size: 2.2rem;
-    color: #002d72;
+  header img {
+    max-width: 120px;
+    margin-bottom: 1rem;
   }
   
   .credit {
-    font-style: italic;
-    color: #666;
+    font-size: 0.9rem;
+    opacity: 0.8;
   }
   
-  section {
-    margin-bottom: 3rem;
-    background: white;
+  .tile-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 2rem;
+    gap: 2rem;
+  }
+  
+  .tile {
+    background: #f5f5f5;
+    border-radius: 12px;
     padding: 1.5rem;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.06);
+    transition: transform 0.3s ease;
   }
   
-  input, textarea {
-    width: 100%;
-    padding: 0.75rem;
-    margin: 0.5rem 0;
-    border-radius: 6px;
-    border: 1px solid #ccc;
-    font-family: inherit;
+  .tile:hover {
+    transform: scale(1.03);
   }
   
-  button {
-    background-color: #002d72;
-    color: white;
-    padding: 0.6rem 1.5rem;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-weight: bold;
-    transition: background 0.3s ease;
+  .tile img {
+    width: 40px;
+    margin-bottom: 1rem;
   }
   
-  button:hover {
-    background-color: #0051a2;
+  .news-banner {
+    background-color: #F3F6FA;
+    padding: 2rem;
   }
   
-  .card-grid {
-    display: grid;
-    gap: 1rem;
+  .news-banner ul {
+    list-style-type: none;
+    padding: 0;
   }
   
   footer {
     text-align: center;
-    font-size: 0.9rem;
-    color: #aaa;
+    padding: 1rem;
+    background-color: #001F5B;
+    color: white;
   }
-
   
