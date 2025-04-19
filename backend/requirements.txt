@@ -1,0 +1,10 @@
+fastapi
+uvicorn[standard]
+python-dotenv
+pydantic
+elasticsearch
+kafka-python
+spacy
+transformers
+pinecone-client
+openai==0.28.0
