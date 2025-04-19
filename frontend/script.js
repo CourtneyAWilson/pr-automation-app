@@ -1,11 +1,21 @@
-fetch('https://newsapi.org/v2/top-headlines?category=business&q=PR&apiKey=6c9e4c1a04cb47649c3a5d41c3d42a36')
-  .then(res => res.json())
-  .then(data => {
-    const list = document.getElementById('industry-news');
-    data.articles.slice(0, 5).forEach(article => {
-      const li = document.createElement('li');
-      li.innerHTML = `<a href="${article.url}" target="_blank">${article.title}</a>`;
-      list.appendChild(li);
+const apiKey = "58df04c8eb5be6be4aef9d5d5539bdad";
+const newsList = document.getElementById("newsList");
+
+async function loadNews() {
+  try {
+    const response = await fetch(`https://gnews.io/api/v4/top-headlines?category=general&lang=en&country=gb&apikey=${apiKey}`);
+    const data = await response.json();
+
+    newsList.innerHTML = "";
+
+    data.articles.slice(0, 6).forEach(article => {
+      const li = document.createElement("li");
+      li.innerHTML = `<strong><a href="${article.url}" target="_blank" rel="noopener noreferrer">${article.title}</a></strong><br/><small>${article.source.name}</small>`;
+      newsList.appendChild(li);
     });
-  })
-  .catch(err => console.error('News fetch failed', err));
+  } catch (error) {
+    newsList.innerHTML = `<li>Could not fetch news. Please check your connection or API key.</li>`;
+  }
+}
+
+loadNews();
