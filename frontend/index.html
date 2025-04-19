@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Axicom PR Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/png" href="axicom_logo.png"/>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <img src="axicom_logo.png" alt="Axicom Logo" class="logo" />
+      <h1>Axicom PR Dashboard</h1>
+      <p class="credit">Built by Courtney Wilson</p>
+    </header>
+
+    <section class="mentions-section">
+      <h2>📰 Latest Mentions</h2>
+      <input id="clientInput" placeholder="Enter client name e.g. acme" />
+      <button onclick="fetchMentions()">Fetch Mentions</button>
+      <div id="mentionsContainer" class="card-grid"></div>
+    </section>
+
+    <section class="release-section">
+      <h2>📝 Generate Press Release</h2>
+      <input id="titleInput" placeholder="Enter release title e.g. Product Launch" />
+      <button onclick="generateRelease()">Generate</button>
+      <textarea id="releaseOutput" placeholder="Generated release will appear here..."></textarea>
+    </section>
+
+    <footer>
+      <p>© 2025 Axicom | Powered by AI | Built by Courtney Wilson</p>
+    </footer>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
