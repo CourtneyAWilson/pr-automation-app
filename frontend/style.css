@@ -1,40 +1,51 @@
 body {
-    font-family: 'Segoe UI', sans-serif;
     margin: 0;
-    background: #f4f8fc;
-    color: #111;
+    font-family: 'Segoe UI', sans-serif;
+    background: #f4f7fb;
+    color: #1a1a1a;
 }
 
 header {
-    background: #00245c;
-    color: white;
+    background: #001f4d;
     text-align: center;
-    padding: 2rem 1rem;
+    padding: 30px 20px;
+    color: white;
 }
 
 header .logo {
-    height: 50px;
-    margin-bottom: 1rem;
+    width: 60px;
+    margin-bottom: 10px;
+}
+
+h1 {
+    font-size: 2rem;
+    margin: 0.2rem 0;
+}
+
+p {
+    margin: 0.2rem 0;
+    font-size: 0.95rem;
 }
 
 main {
-    padding: 2rem;
+    padding: 30px 20px;
 }
 
-.cards {
+.features {
     display: flex;
-    justify-content: space-between;
-    gap: 2rem;
-    margin-bottom: 3rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin-bottom: 50px;
 }
 
 .card {
     background: white;
-    border-radius: 10px;
-    padding: 1.5rem;
-    flex: 1;
+    border-radius: 12px;
+    padding: 20px;
+    width: 250px;
     text-align: center;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
     transition: transform 0.3s ease;
 }
 
@@ -43,40 +54,52 @@ main {
 }
 
 .card img {
-    height: 50px;
-    margin-bottom: 1rem;
+    width: 48px;
+    height: 48px;
+    margin-bottom: 15px;
 }
 
-.news-section h2 {
-    font-size: 1.5rem;
+.card h2 {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+.news {
+    background: #eef2f7;
+    padding: 30px;
+    border-radius: 12px;
+}
+
+.news-header {
     display: flex;
     align-items: center;
-    margin-bottom: 1rem;
+    gap: 10px;
 }
 
-.news-icon {
-    height: 24px;
-    margin-right: 0.5rem;
+.news-header .news-icon {
+    width: 28px;
+    height: 28px;
 }
 
-#news-list {
+#newsList {
     list-style: none;
     padding: 0;
+    margin-top: 15px;
 }
 
-#news-list li {
-    background: #ffffff;
-    padding: 1rem;
-    border-left: 5px solid #00245c;
-    margin-bottom: 0.75rem;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+#newsList li {
+    background: white;
+    padding: 12px 18px;
+    margin-bottom: 12px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
 }
 
 footer {
-    text-align: center;
-    padding: 1.5rem;
-    background: #00245c;
+    background: #001f4d;
     color: white;
+    text-align: center;
+    padding: 20px 0;
     font-size: 0.9rem;
+    margin-top: 40px;
 }

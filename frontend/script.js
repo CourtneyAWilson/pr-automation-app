@@ -1,32 +1,24 @@
-const API_KEY =58df04c8eb5be6be4aef9d5d5539bdad;
-const NEWS_API = `https://gnews.io/api/v4/search?q=public%20relations&lang=en&max=5&apikey=${API_KEY}`;
+const apiKey = "58df04c8eb5be6be4aef9d5d5539bdad";
+const endpoint = `https://gnews.io/api/v4/top-headlines?topic=world&lang=en&token=${apiKey}&max=5`;
 
-window.addEventListener("DOMContentLoaded", () => {
-    fetchNews();
-});
+fetch(endpoint)
+    .then(response => response.json())
+    .then(data => {
+        const newsList = document.getElementById("newsList");
+        newsList.innerHTML = "";
 
-function fetchNews() {
-    fetch(NEWS_API)
-        .then(res => res.json())
-        .then(data => {
-            const list = document.getElementById("news-list");
-            list.innerHTML = "";
-
-            if (data.articles) {
-                data.articles.forEach(article => {
-                    const item = document.createElement("li");
-                    item.innerHTML = `
-                        <strong>${article.title}</strong><br>
-                        <a href="${article.url}" target="_blank">${article.source.name}</a>
-                    `;
-                    list.appendChild(item);
-                });
-            } else {
-                list.innerHTML = "<li>No news available.</li>";
-            }
-        })
-        .catch(err => {
-            document.getElementById("news-list").innerHTML = "<li>Error loading news.</li>";
-            console.error("News API Error:", err);
+        data.articles.forEach(article => {
+            const li = document.createElement("li");
+            const link = document.createElement("a");
+            link.href = article.url;
+            link.textContent = article.title;
+            link.target = "_blank";
+            li.appendChild(link);
+            newsList.appendChild(li);
         });
-}
+    })
+    .catch(error => {
+        console.error("Failed to fetch news:", error);
+        const fallback = document.getElementById("newsList");
+        fallback.innerHTML = "<li>Unable to load headlines at the moment.</li>";
+    });
