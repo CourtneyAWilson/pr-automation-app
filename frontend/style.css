@@ -12,7 +12,11 @@ body {
   }
   
   .logo {
-    height: 60px;
+    .logo {
+        height: 60px;
+        margin-bottom: 20px;
+      }
+      
   }
   
   header {
