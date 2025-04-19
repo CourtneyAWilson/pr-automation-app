@@ -5,42 +5,39 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Axicom PR Dashboard</title>
   <link rel="stylesheet" href="style.css" />
-  <link rel="icon" href="assets/axicom-logo.png" />
 </head>
 <body>
   <header>
-    <img src="assets/axicom-logo.png" alt="Axicom Logo" />
+    <img src="axicom_logo.png" alt="Axicom Logo" class="logo" />
     <h1>Axicom PR Dashboard</h1>
-    <p class="credit">Built by Courtney Wilson</p>
+    <p class="tagline">Built by Courtney Wilson</p>
   </header>
 
-  <main>
-    <section class="tile-grid">
-      <div class="tile">
-        <img src="assets/icons/coverage.svg" alt="Coverage Icon" />
-        <h2>Latest Coverage</h2>
-        <p>Track real-time mentions and sentiment.</p>
-      </div>
-      <div class="tile">
-        <img src="assets/icons/sentiment.svg" alt="Sentiment Icon" />
-        <h2>Sentiment Pulse</h2>
-        <p>Live tone analysis across earned media.</p>
-      </div>
-      <div class="tile interactive">
-        <img src="assets/icons/automation.svg" alt="Automation Icon" />
-        <h2>AI Press Release</h2>
-        <p>Auto-generate coverage-ready releases.</p>
-      </div>
-    </section>
+  <section class="features">
+    <div class="card">
+      <img src="icons/coverage.svg" alt="Coverage Icon" />
+      <h2>Latest Coverage</h2>
+      <p>Track real-time mentions and sentiment.</p>
+    </div>
+    <div class="card">
+      <img src="icons/sentiment.svg" alt="Sentiment Icon" />
+      <h2>Sentiment Pulse</h2>
+      <p>Live tone analysis across earned media.</p>
+    </div>
+    <div class="card">
+      <img src="icons/automation.svg" alt="Automation Icon" />
+      <h2>AI Press Release</h2>
+      <p>Auto-generate coverage-ready releases.</p>
+    </div>
+  </section>
 
-    <section class="news-banner">
-      <h2>PR Industry Headlines</h2>
-      <ul id="industry-news"></ul>
-    </section>
-  </main>
+  <section class="news">
+    <h2>📰 PR Industry Headlines</h2>
+    <ul id="news-list"></ul>
+  </section>
 
   <footer>
-    <p>&copy; 2025 Axicom. PR Automation by Courtney Wilson.</p>
+    <p>&copy; 2025 Axicom. Designed for PR excellence.</p>
   </footer>
 
   <script src="script.js"></script>

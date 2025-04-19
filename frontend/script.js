@@ -1,4 +1,4 @@
-fetch('https://newsapi.org/v2/top-headlines?category=business&q=PR&apiKey=YOUR_NEWSAPI_KEY')
+fetch('https://newsapi.org/v2/top-headlines?category=business&q=PR&apiKey=6c9e4c1a04cb47649c3a5d41c3d42a36')
   .then(res => res.json())
   .then(data => {
     const list = document.getElementById('industry-news');

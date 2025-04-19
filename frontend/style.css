@@ -1,67 +1,79 @@
 body {
-    font-family: 'Inter', sans-serif;
     margin: 0;
-    background: #ffffff;
-    color: #1d1d1f;
+    font-family: 'Segoe UI', sans-serif;
+    background: #f5f8fc;
+    color: #111;
   }
   
   header {
-    background-color: #001F5B;
-    color: white;
-    padding: 2rem;
+    background: #001F54;
     text-align: center;
+    padding: 40px 20px;
+    color: white;
   }
   
-  header img {
-    max-width: 120px;
-    margin-bottom: 1rem;
+  .logo {
+    max-height: 60px;
+    margin-bottom: 10px;
   }
   
-  .credit {
-    font-size: 0.9rem;
+  .tagline {
+    font-size: 1rem;
     opacity: 0.8;
   }
   
-  .tile-grid {
+  .features {
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-around;
-    padding: 2rem;
-    gap: 2rem;
+    margin: 40px 20px;
+    gap: 20px;
+    flex-wrap: wrap;
   }
   
-  .tile {
-    background: #f5f5f5;
-    border-radius: 12px;
-    padding: 1.5rem;
-    width: 300px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.06);
+  .card {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+    width: 280px;
+    text-align: center;
     transition: transform 0.3s ease;
   }
   
-  .tile:hover {
-    transform: scale(1.03);
+  .card:hover {
+    transform: translateY(-5px);
   }
   
-  .tile img {
-    width: 40px;
-    margin-bottom: 1rem;
+  .card img {
+    height: 50px;
+    margin-bottom: 15px;
   }
   
-  .news-banner {
-    background-color: #F3F6FA;
-    padding: 2rem;
+  .news {
+    background: #eef3f7;
+    padding: 40px 20px;
   }
   
-  .news-banner ul {
+  #news-list {
     list-style-type: none;
-    padding: 0;
+    padding-left: 0;
+    max-width: 800px;
+    margin: auto;
+  }
+  
+  #news-list li {
+    margin-bottom: 20px;
+    padding: 15px;
+    background: white;
+    border-left: 4px solid #001F54;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
   }
   
   footer {
-    text-align: center;
-    padding: 1rem;
-    background-color: #001F5B;
+    background: #001F54;
     color: white;
+    text-align: center;
+    padding: 15px;
+    font-size: 0.9rem;
   }
   
