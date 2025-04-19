@@ -1,0 +1,5 @@
+<!-- ai.svg -->
+<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+    d="M12 11c.944 0 1.81.333 2.5.89L17 9m-5 12v-6m0 0c-2.21 0-4-1.79-4-4h0c0-2.21 1.79-4 4-4s4 1.79 4 4h0c0 2.21-1.79 4-4 4zm0-10v2m0 12v2m7-7h2m-2 0h-2m-9 0H3m2 0h2" />
+</svg>
